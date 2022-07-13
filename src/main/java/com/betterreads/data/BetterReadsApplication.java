@@ -18,6 +18,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Lazy;
 
 import javax.annotation.PostConstruct;
+import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -170,6 +171,10 @@ public class BetterReadsApplication {
 	 */
 	@Bean
 	public CqlSessionBuilderCustomizer sessionBuilderCustomizer(DataStaxAstraProperties astraProperties) {
+		String rp = astraProperties.getRaftaProps();
+		System.out.println(rp);
+		File raftaFile = astraProperties.getRafaFile();
+		Path raftaPath = astraProperties.getRafaFile().toPath();
 		Path bundle = astraProperties.getSecureConnectBundle().toPath();
 		return builder -> builder.withCloudSecureConnectBundle(bundle);
 	}

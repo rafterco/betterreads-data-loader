@@ -15,6 +15,8 @@ spring:
 
 datastax.astra:
   secure-connect-bundle: secure-connect.zip
+  rafta-props: Raffffta
+  rafta-file: RaftaFile.txt
 
 astra.db:
   id: 0ae8fc92-abf0-43f8-9d3d-3e6d0e87290e
