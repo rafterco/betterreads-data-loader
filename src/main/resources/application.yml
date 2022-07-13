@@ -1,10 +1,12 @@
 spring:
+  main:
+    allow-circular-references: true
   data:
     cassandra:
       keyspace-name: main
-      username: <username>
-      password: <secret>
-      schema-action: create-if-not-exists
+      username: bWsrRonyqjIusGPkJZLHFnSy
+      password: P9R5RvxMEekMFxbSYKk,T63FNp4+F96+nQhZ5RUFT47nApotqTiEK4-fAYkn3caWRMB.XXr52A8UbuKwkCxLO1_zPFmUX+0qbjiOm_jQsqQ,8EIgmGUHCrEiyh,Xv9qN
+      schema-action: recreate
       request:
         timeout: 10s
       connection:
@@ -15,11 +17,14 @@ datastax.astra:
   secure-connect-bundle: secure-connect.zip
 
 astra.db:
-  id: <db-id>
+  id: 0ae8fc92-abf0-43f8-9d3d-3e6d0e87290e
   region: europe-west1
   keyspace: main
-  application.token: <token>
+  application.token: AstraCS:bWsrRonyqjIusGPkJZLHFnSy:f9e09f8bbf4cd9972a64b8adebd58cbbc65c7f03d75ce99eed24f8d31e2744c0
 
+datadump.location:
+  author: /Users/colinrafter/Downloads/test-authors.txt
+  works: /Users/colinrafter/Downloads/test-works.txt
 
 
 
